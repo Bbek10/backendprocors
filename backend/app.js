@@ -5,8 +5,16 @@ const cookieParser = require("cookie-parser");
 const errorMiddleware = require("./middleware/error");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
-const dotenv = require("dotenv");
-const path = require("path");
+// const dotenv = require("dotenv");
+// const path = require("path");
+
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser());

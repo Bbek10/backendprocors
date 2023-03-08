@@ -1,4 +1,11 @@
 const app = require("./app.js");
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
